@@ -60,11 +60,11 @@ export default function ProductActsSection({ onSelectAct }: ProductActsSectionPr
     {
       act: 'Act II',
       title: 'Vault',
-      pillText: '○ IN DEVELOPMENT',
+      pillText: '○ COMING TO ZCASH',
       pillClass: 'border-[rgba(239,233,221,0.2)] text-[rgba(239,233,221,0.6)] bg-transparent',
       dotColor: 'border border-[rgba(239,233,221,0.4)]',
       description:
-        'Private value. Agents hold, spend and settle on-chain through shielded transactions and self-custodied wallets — no observer, no trail.',
+        'Private value. Agents hold, spend and settle through zk-SNARK shielded transfers — the cryptography Zcash pioneered, landing on the Zcash layer stack.',
       hasCodeChip: false,
     },
     {
@@ -74,7 +74,7 @@ export default function ProductActsSection({ onSelectAct }: ProductActsSectionPr
       pillClass: 'border-[rgba(239,233,221,0.2)] text-[rgba(239,233,221,0.6)] bg-transparent',
       dotColor: 'border border-[rgba(239,233,221,0.4)]',
       description:
-        'A surveillance-free machine economy. Millions of agents transacting, coordinating and earning with identities no one can track, sell or freeze.',
+        'A surveillance-free machine economy. Millions of agents transacting, coordinating and earning with identities no one can track, sell or freeze — shielded, Zcash-style.',
       hasCodeChip: false,
     },
   ];

@@ -111,6 +111,12 @@ export default function Hero({ onWatchVideo, onJoinDiscord, loaderFinished }: He
           winning privacy. Your agents are next in line.</strong>
         </p>
 
+        {/* Zcash note */}
+        <p className="mt-4 text-[13px] tracking-[0.02em] text-[rgba(239,233,221,0.4)] max-w-[480px]">
+          Built on the zk-SNARK cryptography made famous by Zcash — with native support for
+          the Zcash layer stack on the way.
+        </p>
+
         {/* CTA Buttons */}
         <div ref={ctaRef} className="mt-9 sm:mt-11 flex flex-wrap items-center gap-4">
           <button
@@ -150,7 +156,7 @@ export default function Hero({ onWatchVideo, onJoinDiscord, loaderFinished }: He
             BUILT ON
           </div>
           <div className="text-[rgba(239,233,221,0.55)] tracking-[0.16em]">
-            ZERO-KNOWLEDGE · ENCRYPTED ENCLAVES · ON-CHAIN
+            ZK-SNARKs (ZCASH) · ENCRYPTED ENCLAVES · ON-CHAIN
           </div>
         </div>
       </div>

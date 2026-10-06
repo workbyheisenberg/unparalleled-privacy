@@ -47,8 +47,8 @@ export function VideoDemoModal({ isOpen, onClose }: ModalProps) {
           <div className="absolute top-6 left-6 right-6 flex items-start justify-between font-mono text-xs text-[#EFE9DD]/90 select-none">
             <div className="flex flex-col gap-1 bg-black/60 backdrop-blur-md px-3 py-2 rounded border border-white/10">
               <span className="text-[#F3DFA8] font-bold">RUN {activeRun}: AGENT-7B</span>
-              <span className="text-[11px] text-[rgba(239,233,221,0.6)]">ENCRYPTED INFERENCE · ENCLAVE ATTESTED · ZK PROOFS</span>
-              <span className="text-[11px] text-emerald-400">MODE: PRIVATE AGENT · KEYS SELF-CUSTODIED</span>
+              <span className="text-[11px] text-[rgba(239,233,221,0.6)]">ENCRYPTED INFERENCE · ENCLAVE ATTESTED · ZK-SNARK</span>
+              <span className="text-[11px] text-emerald-400">MODE: PRIVATE AGENT · ZCASH LAYER STACK READY</span>
             </div>
 
             <div className="flex gap-2">
@@ -94,7 +94,7 @@ export function VideoDemoModal({ isOpen, onClose }: ModalProps) {
               <span className="text-[#EFE9DD]">OBSERVERS 0</span>
               <span className="text-[#EFE9DD]">LEAKED 0 B</span>
               <span className="text-[#EFE9DD]">CIPHER 256-BIT</span>
-              <span className="text-[#EFE9DD]">PROOFS ZK</span>
+              <span className="text-[#EFE9DD]">PROOFS ZK-SNARK</span>
             </div>
 
             <div className="hidden sm:flex items-center gap-3 bg-black/70 backdrop-blur-md px-4 py-2.5 rounded-lg border border-white/10 text-[11px] text-[rgba(239,233,221,0.7)]">
@@ -176,7 +176,7 @@ export function GitHubModal({ isOpen, onClose }: ModalProps) {
 
         <p className="text-[14px] text-[rgba(239,233,221,0.65)] leading-relaxed mb-6">
           Starring the repository supports open, independent work on private AI agents — encrypted
-          inference and shielded transactions anyone can audit.
+          inference and zk-SNARK shielded transfers, including the coming Zcash layer stack.
         </p>
 
         <div className="flex items-center justify-between p-4 rounded-xl border border-[rgba(239,233,221,0.1)] bg-[#070605] mb-6">
@@ -244,8 +244,8 @@ export function DiscordModal({ isOpen, onClose }: ModalProps) {
         </div>
 
         <p className="text-[14px] text-[rgba(239,233,221,0.65)] leading-relaxed mb-6">
-          Discuss private agents, shielded payments and enclave design — and get early builds of
-          Vault and Sovereign.
+          Discuss private agents, shielded payments and enclave design — get early builds of Vault
+          and Sovereign, and follow our Zcash layer stack work.
         </p>
 
         <div className="space-y-2 mb-6 text-xs font-mono text-[rgba(239,233,221,0.6)]">
@@ -254,6 +254,9 @@ export function DiscordModal({ isOpen, onClose }: ModalProps) {
           </div>
           <div className="flex items-center gap-2 p-2 rounded bg-white/[0.03]">
             <span className="text-[#F3DFA8]">#</span> zk-and-enclaves
+          </div>
+          <div className="flex items-center gap-2 p-2 rounded bg-white/[0.03]">
+            <span className="text-[#F3DFA8]">#</span> zcash-layer-stack
           </div>
           <div className="flex items-center gap-2 p-2 rounded bg-white/[0.03]">
             <span className="text-[#F3DFA8]">#</span> agent-economy
@@ -368,7 +371,7 @@ result = veil.infer(
     prompt=agent.private_thought,
     retention="none",   # zero logs, by contract
 )
-print(result.proof)     # zk-snark you can verify on-chain
+print(result.proof)     # zk-SNARK proof you can verify on-chain
 `}
               </pre>
             </div>
@@ -378,7 +381,8 @@ print(result.proof)     # zk-snark you can verify on-chain
             <div>
               <p className="text-white/60 mb-2"># Agents transact and coordinate without leaving a trail</p>
               <pre className="p-3 bg-black/60 rounded border border-white/10 text-[#EFE9DD] overflow-x-auto">
-{`pay = veil.shielded_payment(to="agent://research-2", amount=usdc(5))
+{`# Settle through the Zcash layer stack, shielded by zk-SNARKs
+pay = veil.shielded_payment(to="agent://research-2", amount=zcash(2.5), chain="zcash")
 
 pay.on("settled", lambda r: agent.remember(r.receipt_only))
 
@@ -423,10 +427,11 @@ export function ActDetailModal({
     2: {
       title: 'Act II: Vault',
       status: 'IN ACTIVE DEVELOPMENT (ALPHA)',
-      summary: 'Shielded value — the layer that lets agents hold, spend and settle with no observer.',
+      summary: 'Shielded value — zk-SNARK transfers that let agents hold, spend and settle with no observer.',
       bullets: [
         'Agent-to-agent payments with private amounts.',
         'On-chain settlement that stays verifiable, never readable.',
+        'Coming to the Zcash layer stack, with shielded pools for agents.',
         'Per-agent spending policies and streaming payments.',
         'You keep the only audit key.',
       ],
@@ -439,7 +444,7 @@ export function ActDetailModal({
       bullets: [
         'Millions of agents with identities that can’t be tracked or sold.',
         'Private coordination, marketplaces and reputation — all off the record.',
-        'Zero-knowledge proofs instead of gatekeepers.',
+        'Zcash-style shielded value and zero-knowledge proofs instead of gatekeepers.',
         'Privacy as the default substrate for machinekind.',
       ],
       icon: <Users className="text-[#F3DFA8]" size={24} />,

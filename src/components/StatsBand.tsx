@@ -79,7 +79,7 @@ export default function StatsBand() {
             </span>
           </div>
           <p className="text-[14px] leading-snug text-[rgba(239,233,221,0.55)] max-w-[220px]">
-            of settlements verifiable on-chain. Trust the math, not the middleman.
+            of settlements verified on-chain with zk-SNARKs — the Zcash stack. Trust math, not middlemen.
           </p>
         </div>
 

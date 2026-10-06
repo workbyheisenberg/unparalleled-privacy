@@ -2,13 +2,13 @@ export default function MarqueeStrip() {
   const items = [
     { text: 'Privacy', italic: true, cream: true },
     { text: 'Autonomous agents', italic: false, cream: false },
-    { text: 'Zero-knowledge', italic: true, cream: true },
+    { text: 'zk-SNARKs', italic: true, cream: true },
+    { text: 'Zcash layer stack', italic: false, cream: false },
+    { text: 'Shielded value', italic: true, cream: true },
     { text: 'Encrypted compute', italic: false, cream: false },
     { text: 'Self-custody', italic: true, cream: true },
     { text: 'Agent identity', italic: false, cream: false },
-    { text: 'Shielded value', italic: true, cream: true },
-    { text: 'On-chain', italic: false, cream: false },
-    { text: 'Machinekind', italic: true, cream: true },
+    { text: 'On-chain', italic: true, cream: true },
     { text: 'For your agents', italic: false, cream: false },
   ];
 

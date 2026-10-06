@@ -140,7 +140,7 @@ export default function Footer({
       {/* Copyright row */}
       <div className="mt-20 pt-8 border-t border-[rgba(239,233,221,0.08)] flex flex-col sm:flex-row items-center justify-between text-[12px] font-mono text-[rgba(239,233,221,0.35)] gap-4">
         <div>© {new Date().getFullYear()} UNPARALLELED. ALL RIGHTS RESERVED.</div>
-        <div>OPEN SOURCE · PRIVATE BY DEFAULT</div>
+        <div>OPEN SOURCE · ZK-SNARK SHIELDED · ZCASH LAYER STACK</div>
       </div>
     </footer>
   );

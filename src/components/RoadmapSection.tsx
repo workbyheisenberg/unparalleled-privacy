@@ -61,10 +61,12 @@ export default function RoadmapSection() {
       title: 'Shielded value & payments',
       status: '○ ON THE WAY',
       isShippingToday: false,
-      subtitle: 'Your agents transact, get paid and settle without leaving a trail.',
+      subtitle: 'Your agents transact, get paid and settle without leaving a trail — Zcash layer stack support included.',
       bullets: [
         { text: 'Shielded agent-to-agent payments', shipped: false },
         { text: 'On-chain settlement, private amounts', shipped: false },
+        { text: 'zk-SNARK shielded pools for agents', shipped: false },
+        { text: 'Native Zcash layer stack support', shipped: false },
         { text: 'Gas abstraction for autonomous agents', shipped: false },
         { text: 'Per-agent spending policies', shipped: false },
         { text: 'Streaming payments for services', shipped: false },
@@ -110,6 +112,7 @@ export default function RoadmapSection() {
       bullets: [
         { text: 'LangChain, CrewAI & AutoGPT', shipped: false },
         { text: 'ElizaOS & agent runtimes', shipped: false },
+        { text: 'Zcash layer stack & shielded pools', shipped: false },
         { text: 'EVM, Solana & L2 settlement', shipped: false },
         { text: 'OpenAI, Anthropic & open weights', shipped: false },
         { text: 'Encrypted vector DBs & storage', shipped: false },
@@ -130,7 +133,7 @@ export default function RoadmapSection() {
             <span className="italic text-[#F3DFA8] gold-glow font-display">private machine economy.</span>
           </h2>
           <p className="mt-4 text-[16px] sm:text-[17px] text-[rgba(239,233,221,0.55)]">
-            Veil is live today. The rest is coming — in the open.
+            Veil is live today. Zcash layer stack support is coming — in the open.
           </p>
         </div>
 

@@ -14,7 +14,7 @@ export default function PrinciplesSection() {
       num: '/02',
       title: 'Verify, don’t trust',
       description:
-        'Every enclave is attested, every settlement provable. Open source, zero-knowledge, and auditable by anyone.',
+        'Every enclave is attested, every settlement provable with zk-SNARKs — the cryptography Zcash pioneered. Open source and auditable by anyone.',
     },
     {
       num: '/03',
