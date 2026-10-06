@@ -33,93 +33,89 @@ export default function RoadmapSection() {
   const cards = [
     {
       num: '01',
-      title: 'Control your camera from software',
+      title: 'Shield your first agent',
       status: '● SHIPPING TODAY',
       isShippingToday: true,
-      subtitle: 'The open-source engine that lets any app talk to your camera.',
+      subtitle: 'Veil, our encrypted inference layer — the first private breath for an Unparalleled agent.',
       isCard01: true,
     },
     {
       num: '02',
-      title: 'Upgrade your gear with software',
+      title: 'Private inference at scale',
       status: '○ ON THE WAY',
       isShippingToday: false,
-      subtitle: 'Features that used to need extra hardware, now a software toggle.',
+      subtitle: 'Privacy that keeps up with production traffic, not just demos.',
       bullets: [
-        { text: 'Auto-capture on motion or sound', shipped: false },
-        { text: 'Rack focus / follow focus, in software', shipped: false },
-        { text: 'Watch & tether every camera wirelessly', shipped: false },
-        { text: 'Drive sliders & gimbals', shipped: false },
-        { text: 'Recognize and follow your subject', shipped: false },
-        { text: 'Focus peaking & exposure scopes', shipped: false },
-        { text: 'Turn your screen into a teleprompter', shipped: false },
-        { text: 'Use your camera as a great webcam', shipped: false },
+        { text: 'Sub-50ms shielding overhead', shipped: false },
+        { text: 'Batch thousands of agent calls in parallel', shipped: false },
+        { text: 'Region-pinned, attested enclaves', shipped: false },
+        { text: 'Reproducible attestation reports', shipped: false },
+        { text: 'Auto-scale with demand', shipped: false },
+        { text: 'No single point of decryption', shipped: false },
+        { text: 'Spend caps per agent', shipped: false },
+        { text: 'Round-the-clock privacy monitoring', shipped: false },
       ],
     },
     {
       num: '03',
-      title: 'Start shooting in one click',
+      title: 'Shielded value & payments',
       status: '○ ON THE WAY',
       isShippingToday: false,
-      subtitle: 'Studio sets up the scene, tone, and files everything for you.',
+      subtitle: 'Your agents transact, get paid and settle without leaving a trail.',
       bullets: [
-        { text: 'One tap to set lights, audio & exposure', shipped: false },
-        { text: 'Footage lands in your timeline automatically', shipped: false },
-        { text: 'See every camera live while you shoot', shipped: false },
-        { text: 'Desktop & mobile app', shipped: false },
-        { text: 'Audio & video synced for you', shipped: false },
-        { text: 'Creator-style shooting modes', shipped: false },
+        { text: 'Shielded agent-to-agent payments', shipped: false },
+        { text: 'On-chain settlement, private amounts', shipped: false },
+        { text: 'Gas abstraction for autonomous agents', shipped: false },
+        { text: 'Per-agent spending policies', shipped: false },
+        { text: 'Streaming payments for services', shipped: false },
+        { text: 'Auditable by you alone', shipped: false },
       ],
     },
     {
       num: '04',
-      title: 'Talk to your studio',
+      title: 'Verifiable agent identity',
       status: '○ ON THE WAY',
       isShippingToday: false,
-      subtitle: 'Say what you want, AI sets up the shot — you stay in charge.',
+      subtitle: 'Prove who your agent is — without revealing who it belongs to.',
       bullets: [
-        { text: 'Voice control for your whole studio', shipped: false },
-        { text: 'Plain-language camera & studio commands', shipped: false },
-        { text: 'Runs local AI models, privately', shipped: false },
-        { text: 'Let AI assistants run the camera (MCP)', shipped: false },
-        { text: 'AI that understands what your camera sees', shipped: false },
-        { text: 'Captures the context editing needs later', shipped: false },
+        { text: 'Self-sovereign DIDs for every agent', shipped: false },
+        { text: 'Zero-knowledge credentials', shipped: false },
+        { text: 'Reputation without doxxing', shipped: false },
+        { text: 'Selective disclosure', shipped: false },
+        { text: 'Revocable, scoped permissions', shipped: false },
+        { text: 'No central registry to breach', shipped: false },
       ],
     },
     {
       num: '05',
-      title: 'Skip editing altogether',
+      title: 'Private coordination',
       status: '○ ON THE WAY',
       isShippingToday: false,
-      subtitle: 'Hand off the tedious hours of post — keep every creative call.',
+      subtitle: 'Agents talk, plan and team up completely off the record.',
       bullets: [
-        { text: 'Auto-pick the best takes', shipped: false },
-        { text: 'Transcripts & captions', shipped: false },
-        { text: 'Hand off to Premiere, DaVinci & Final Cut', shipped: false },
-        { text: 'Match color & exposure across clips', shipped: false },
-        { text: 'Vertical cutdowns & ready-to-post exports', shipped: false },
-        { text: 'Sync timecode, audio & multi-cam', shipped: false },
-        { text: 'A first rough cut, assembled for you', shipped: false },
-        { text: 'Find & drop in B-roll', shipped: false },
-        { text: 'Translate & dub into other languages', shipped: false },
-        { text: 'Preview the whole piece before you shoot', shipped: false },
+        { text: 'End-to-end encrypted messaging', shipped: false },
+        { text: 'Private multi-agent swarms', shipped: false },
+        { text: 'Confidential task marketplaces', shipped: false },
+        { text: 'Encrypted shared memory', shipped: false },
+        { text: 'Anonymous reputation signals', shipped: false },
+        { text: 'Zero metadata leakage', shipped: false },
       ],
     },
     {
       num: '06',
-      title: 'Plug in the rest of your studio',
+      title: 'Plug into your stack',
       status: '○ ON THE WAY',
       isShippingToday: false,
-      subtitle: 'The hub your lights, sound, stream, and edit tools all talk to.',
+      subtitle: 'One privacy layer beneath every agent framework and chain.',
       bullets: [
-        { text: 'OBS, Twitch & capture cards', shipped: false },
-        { text: 'Home Assistant, Scrypted & HomeKit', shipped: false },
-        { text: 'Philips Hue & studio lighting', shipped: false },
-        { text: 'Blackmagic Speed Editor / Console', shipped: false },
-        { text: 'DaVinci Resolve, Premiere & Final Cut', shipped: false },
-        { text: 'Elgato Stream Deck & Prompter', shipped: false },
-        { text: 'Audio interfaces, gimbals & sliders', shipped: false },
-        { text: 'Community templates & marketplace', shipped: false },
+        { text: 'LangChain, CrewAI & AutoGPT', shipped: false },
+        { text: 'ElizaOS & agent runtimes', shipped: false },
+        { text: 'EVM, Solana & L2 settlement', shipped: false },
+        { text: 'OpenAI, Anthropic & open weights', shipped: false },
+        { text: 'Encrypted vector DBs & storage', shipped: false },
+        { text: 'Wallets, MPC & hardware enclaves', shipped: false },
+        { text: 'CI, monitoring & alerts', shipped: false },
+        { text: 'Community models & environments', shipped: false },
       ],
     },
   ];
@@ -130,11 +126,11 @@ export default function RoadmapSection() {
       <div className="flex flex-col md:flex-row md:items-start justify-between gap-8 pb-14 border-b border-[rgba(239,233,221,0.12)]">
         <div>
           <h2 className="font-display text-5xl sm:text-6xl md:text-[72px] leading-[1.04] tracking-tight text-[#EFE9DD]">
-            From “let’s shoot” to <br />
-            <span className="italic text-[#F3DFA8] gold-glow font-display">“it’s live.”</span>
+            From a single shielded agent to a{' '}
+            <span className="italic text-[#F3DFA8] gold-glow font-display">private machine economy.</span>
           </h2>
           <p className="mt-4 text-[16px] sm:text-[17px] text-[rgba(239,233,221,0.55)]">
-            Link is here today. We’re building a lot more.
+            Veil is live today. The rest is coming — in the open.
           </p>
         </div>
 
@@ -216,17 +212,17 @@ export default function RoadmapSection() {
                 <div className="mt-10 ml-0 sm:ml-12 flex flex-col gap-8">
                   {/* Group 1 & 2 */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* CONTROL & CAPTURE */}
+                    {/* ENCLAVES & INFERENCE */}
                     <div>
                       <div className="font-mono-tag text-[11px] text-[rgba(239,233,221,0.35)] tracking-[0.2em] mb-4">
-                        CONTROL & CAPTURE
+                        ENCLAVES & INFERENCE
                       </div>
                       <div className="flex flex-col gap-3">
                         {[
-                          'Set ISO, shutter, aperture & more from code',
-                          'Capture photos',
-                          'Live view streaming',
-                          'Start / stop recording',
+                          'Run every prompt inside a sealed enclave',
+                          'Memory encrypted in flight and at rest',
+                          'Attested hardware you can verify yourself',
+                          'No logs, no training on your agent\'s data',
                         ].map((bullet, i) => (
                           <div key={i} className="flex items-center gap-3 text-[16px] sm:text-[17px] text-[#EFE9DD]">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#F3DFA8] shrink-0" />
@@ -236,17 +232,17 @@ export default function RoadmapSection() {
                       </div>
                     </div>
 
-                    {/* CONNECT & TRANSFER */}
+                    {/* AGENTS & KEYS */}
                     <div>
                       <div className="font-mono-tag text-[11px] text-[rgba(239,233,221,0.35)] tracking-[0.2em] mb-4">
-                        CONNECT & TRANSFER
+                        AGENTS & KEYS
                       </div>
                       <div className="flex flex-col gap-3">
                         {[
-                          'USB in the browser (WebUSB) & on a computer',
-                          'Detects your camera automatically',
-                          'Pull photos & video off the camera',
-                          'React to camera events in real time',
+                          'Self-custodied wallets for every agent',
+                          'Drop-in with your existing framework',
+                          'One-line SDK, any model',
+                          'Watch every private call live',
                         ].map((bullet, i) => (
                           <div key={i} className="flex items-center gap-3 text-[16px] sm:text-[17px] text-[#EFE9DD]">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#F3DFA8] shrink-0" />
@@ -257,18 +253,18 @@ export default function RoadmapSection() {
                     </div>
                   </div>
 
-                  {/* Hairline divider before CAMERAS */}
+                  {/* Hairline divider before MODELS */}
                   <div className="w-full h-[1px] bg-[rgba(239,233,221,0.08)] pt-2">
                     <div className="font-mono-tag text-[11px] text-[rgba(239,233,221,0.35)] tracking-[0.2em] mb-4">
-                      CAMERAS
+                      SUPPORTED TODAY
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {/* Left: Filled */}
                       <div className="flex flex-col gap-3">
                         {[
-                          'Sony α — full support',
-                          'Nikon Z — capture, settings, live view',
-                          'Canon EOS R — control & events',
+                          'Open-weights models — full support',
+                          'Hosted APIs — proxied privately',
+                          'Local models — fully offline',
                         ].map((bullet, i) => (
                           <div key={i} className="flex items-center gap-3 text-[16px] sm:text-[17px] text-[#EFE9DD]">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#F3DFA8] shrink-0" />
@@ -280,9 +276,9 @@ export default function RoadmapSection() {
                       {/* Right: Hollow */}
                       <div className="flex flex-col gap-3">
                         {[
-                          'Wireless (Wi-Fi) control',
-                          'Nikon / Canon video & live view',
-                          'Fujifilm, Panasonic, Olympus & more',
+                          'Autonomous trading agents',
+                          'Multi-agent swarms',
+                          'On-chain agent runtimes',
                         ].map((bullet, i) => (
                           <div key={i} className="flex items-center gap-3 text-[16px] sm:text-[17px] text-[rgba(239,233,221,0.55)]">
                             <span className="w-2.5 h-2.5 rounded-full border border-[rgba(239,233,221,0.35)] shrink-0" />

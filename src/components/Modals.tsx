@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Star, Copy, Check, ExternalLink, Play, Pause, Disc, Terminal, Shield, Zap, Camera, Sliders } from 'lucide-react';
+import { X, Star, Copy, Check, ExternalLink, Play, Pause, Disc, Terminal, Sparkles, Cpu, Users } from 'lucide-react';
 
 interface ModalProps {
   isOpen: boolean;
@@ -8,7 +8,7 @@ interface ModalProps {
 
 export function VideoDemoModal({ isOpen, onClose }: ModalProps) {
   const [isPlaying, setIsPlaying] = useState(true);
-  const [activeCam, setActiveCam] = useState<'A' | 'B'>('A');
+  const [activeRun, setActiveRun] = useState<'A' | 'B'>('A');
 
   if (!isOpen) return null;
 
@@ -20,7 +20,7 @@ export function VideoDemoModal({ isOpen, onClose }: ModalProps) {
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
             <span className="font-mono-tag text-[11px] text-[#EFE9DD]">
-              LIVE STUDIO MONITOR · DARKGRADE LINK 2.4.0
+              LIVE AGENT PRIVACY MONITOR · UNPARALLELED v0.1
             </span>
           </div>
           <button
@@ -36,7 +36,7 @@ export function VideoDemoModal({ isOpen, onClose }: ModalProps) {
         <div className="relative aspect-video w-full bg-[#050403] overflow-hidden flex items-center justify-center">
           <img
             src="/bg/poster.jpg"
-            alt="Camera Live Monitor Feed"
+            alt="Model training run visualization"
             className={`w-full h-full object-cover transition-transform duration-1000 ${
               isPlaying ? 'scale-105' : 'scale-100'
             }`}
@@ -46,27 +46,27 @@ export function VideoDemoModal({ isOpen, onClose }: ModalProps) {
           {/* OSD Telemetry Overlay */}
           <div className="absolute top-6 left-6 right-6 flex items-start justify-between font-mono text-xs text-[#EFE9DD]/90 select-none">
             <div className="flex flex-col gap-1 bg-black/60 backdrop-blur-md px-3 py-2 rounded border border-white/10">
-              <span className="text-[#F3DFA8] font-bold">CAM {activeCam}: SONY α7 IV</span>
-              <span className="text-[11px] text-[rgba(239,233,221,0.6)]">4K 24p · XAVC S-I · 10-BIT 4:2:2</span>
-              <span className="text-[11px] text-emerald-400">CONNECT: USB 3.2 GEN 2 · LOCAL PRIVACY ON</span>
+              <span className="text-[#F3DFA8] font-bold">RUN {activeRun}: AGENT-7B</span>
+              <span className="text-[11px] text-[rgba(239,233,221,0.6)]">ENCRYPTED INFERENCE · ENCLAVE ATTESTED · ZK PROOFS</span>
+              <span className="text-[11px] text-emerald-400">MODE: PRIVATE AGENT · KEYS SELF-CUSTODIED</span>
             </div>
 
             <div className="flex gap-2">
               <button
-                onClick={() => setActiveCam('A')}
+                onClick={() => setActiveRun('A')}
                 className={`px-3 py-1.5 rounded text-xs font-mono transition-colors ${
-                  activeCam === 'A' ? 'bg-[#F3DFA8] text-black font-semibold' : 'bg-black/60 text-white/70 border border-white/10'
+                  activeRun === 'A' ? 'bg-[#F3DFA8] text-black font-semibold' : 'bg-black/60 text-white/70 border border-white/10'
                 }`}
               >
-                CAM A (Wide)
+                RUN A (Shielded)
               </button>
               <button
-                onClick={() => setActiveCam('B')}
+                onClick={() => setActiveRun('B')}
                 className={`px-3 py-1.5 rounded text-xs font-mono transition-colors ${
-                  activeCam === 'B' ? 'bg-[#F3DFA8] text-black font-semibold' : 'bg-black/60 text-white/70 border border-white/10'
+                  activeRun === 'B' ? 'bg-[#F3DFA8] text-black font-semibold' : 'bg-black/60 text-white/70 border border-white/10'
                 }`}
               >
-                CAM B (Tight)
+                RUN B (Baseline)
               </button>
             </div>
           </div>
@@ -78,7 +78,7 @@ export function VideoDemoModal({ isOpen, onClose }: ModalProps) {
               <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-[1px] bg-[#F3DFA8]" />
               <div className="absolute top-1/2 -left-1.5 -translate-y-1/2 w-[1px] h-3 bg-[#F3DFA8]" />
               <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-[1px] h-3 bg-[#F3DFA8]" />
-              <span className="absolute bottom-2 right-2 text-[9px] font-mono text-[#F3DFA8]/80">EYE-AF LOCK</span>
+              <span className="absolute bottom-2 right-2 text-[9px] font-mono text-[#F3DFA8]/80">ENCLAVE SEALED</span>
             </div>
           </div>
 
@@ -91,16 +91,16 @@ export function VideoDemoModal({ isOpen, onClose }: ModalProps) {
               >
                 {isPlaying ? <Pause size={18} /> : <Play size={18} />}
               </button>
-              <span className="text-[#EFE9DD]">ISO 800</span>
-              <span className="text-[#EFE9DD]">1/50</span>
-              <span className="text-[#EFE9DD]">f/2.8</span>
-              <span className="text-[#EFE9DD]">5600K</span>
+              <span className="text-[#EFE9DD]">OBSERVERS 0</span>
+              <span className="text-[#EFE9DD]">LEAKED 0 B</span>
+              <span className="text-[#EFE9DD]">CIPHER 256-BIT</span>
+              <span className="text-[#EFE9DD]">PROOFS ZK</span>
             </div>
 
             <div className="hidden sm:flex items-center gap-3 bg-black/70 backdrop-blur-md px-4 py-2.5 rounded-lg border border-white/10 text-[11px] text-[rgba(239,233,221,0.7)]">
-              <span className="text-emerald-400">● REALTIME AUDIO SYNC</span>
+              <span className="text-emerald-400">● REALTIME ATTESTATION</span>
               <span>BUFFER: 0 MS</span>
-              <span className="text-[#F3DFA8]">LOCAL FIRST EDIT: READY</span>
+              <span className="text-[#F3DFA8]">NEXT AGENT: READY</span>
             </div>
           </div>
         </div>
@@ -109,10 +109,10 @@ export function VideoDemoModal({ isOpen, onClose }: ModalProps) {
         <div className="p-6 bg-[#070605] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-[rgba(239,233,221,0.7)]">
           <div>
             <div className="text-[#EFE9DD] font-medium text-[15px] mb-1">
-              Zero-latency USB tethering & instant timeline assembly
+              A private run only you can see
             </div>
             <p className="text-xs text-[rgba(239,233,221,0.55)]">
-              Camera feeds stream directly into browser WebUSB or local background daemon.
+              Every token is processed inside an attested enclave. Nothing is sent to someone else’s cloud.
             </p>
           </div>
           <button
@@ -145,7 +145,7 @@ export function GitHubModal({ isOpen, onClose }: ModalProps) {
   };
 
   const copyClone = () => {
-    navigator.clipboard.writeText('git clone https://github.com/darkgrade/darkgrade.git');
+    navigator.clipboard.writeText('git clone https://github.com/unparalleled/veil.git');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -166,16 +166,17 @@ export function GitHubModal({ isOpen, onClose }: ModalProps) {
           </div>
           <div>
             <div className="font-pixel text-[13px] text-[#EFE9DD] uppercase tracking-wider">
-              (+) DARKGRADE / LINK
+              (+) UNPARALLELED / VEIL
             </div>
             <div className="text-xs text-[rgba(239,233,221,0.5)] font-mono">
-              Fair Core Licensed · Open Source
+              Open Source · Apache 2.0
             </div>
           </div>
         </div>
 
         <p className="text-[14px] text-[rgba(239,233,221,0.65)] leading-relaxed mb-6">
-          Starring the repository helps support independent camera protocols and local-first creative tools.
+          Starring the repository supports open, independent work on private AI agents — encrypted
+          inference and shielded transactions anyone can audit.
         </p>
 
         <div className="flex items-center justify-between p-4 rounded-xl border border-[rgba(239,233,221,0.1)] bg-[#070605] mb-6">
@@ -200,7 +201,7 @@ export function GitHubModal({ isOpen, onClose }: ModalProps) {
 
         {/* Git Clone command */}
         <div className="flex items-center justify-between p-3 rounded-lg bg-[#070605] border border-[rgba(239,233,221,0.1)] font-mono text-xs text-[rgba(239,233,221,0.7)]">
-          <span className="truncate mr-2">$ git clone https://github.com/darkgrade/darkgrade</span>
+          <span className="truncate mr-2">$ git clone https://github.com/unparalleled/veil</span>
           <button
             onClick={copyClone}
             className="p-1.5 hover:text-[#F3DFA8] transition-colors cursor-pointer shrink-0"
@@ -233,28 +234,29 @@ export function DiscordModal({ isOpen, onClose }: ModalProps) {
           </div>
           <div>
             <div className="font-pixel text-[13px] text-[#EFE9DD] uppercase tracking-wider">
-              DARKGRADE COMMUNITY
+              UNPARALLELED COMMONS
             </div>
             <div className="text-xs text-emerald-400 font-mono flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              8,420 CREATORS ONLINE
+              1,204 BUILDERS ONLINE
             </div>
           </div>
         </div>
 
         <p className="text-[14px] text-[rgba(239,233,221,0.65)] leading-relaxed mb-6">
-          Discuss camera hardware firmware, test WebUSB drivers, and get early alpha builds of Studio and Create.
+          Discuss private agents, shielded payments and enclave design — and get early builds of
+          Vault and Sovereign.
         </p>
 
         <div className="space-y-2 mb-6 text-xs font-mono text-[rgba(239,233,221,0.6)]">
           <div className="flex items-center gap-2 p-2 rounded bg-white/[0.03]">
-            <span className="text-[#F3DFA8]">#</span> camera-tethering-troubleshooting
+            <span className="text-[#F3DFA8]">#</span> private-agents
           </div>
           <div className="flex items-center gap-2 p-2 rounded bg-white/[0.03]">
-            <span className="text-[#F3DFA8]">#</span> local-ai-edit-recipes
+            <span className="text-[#F3DFA8]">#</span> zk-and-enclaves
           </div>
           <div className="flex items-center gap-2 p-2 rounded bg-white/[0.03]">
-            <span className="text-[#F3DFA8]">#</span> studio-rig-showcase
+            <span className="text-[#F3DFA8]">#</span> agent-economy
           </div>
         </div>
 
@@ -274,7 +276,7 @@ export function DiscordModal({ isOpen, onClose }: ModalProps) {
 }
 
 export function DocsModal({ isOpen, onClose }: ModalProps) {
-  const [tab, setTab] = useState<'quickstart' | 'webusb' | 'events'>('quickstart');
+  const [tab, setTab] = useState<'quickstart' | 'inference' | 'agents'>('quickstart');
 
   if (!isOpen) return null;
 
@@ -286,7 +288,7 @@ export function DocsModal({ isOpen, onClose }: ModalProps) {
           <div className="flex items-center gap-3">
             <Terminal size={18} className="text-[#F3DFA8]" />
             <span className="font-mono-tag text-[11px] text-[#EFE9DD]">
-              DARKGRADE LINK DOCS & API REFERENCE
+              UNPARALLELED DOCS & API REFERENCE
             </span>
           </div>
           <button
@@ -308,20 +310,20 @@ export function DocsModal({ isOpen, onClose }: ModalProps) {
             Quickstart
           </button>
           <button
-            onClick={() => setTab('webusb')}
+            onClick={() => setTab('inference')}
             className={`pb-3 border-b-2 transition-colors cursor-pointer ${
-              tab === 'webusb' ? 'border-[#F3DFA8] text-[#F3DFA8]' : 'border-transparent text-white/50'
+              tab === 'inference' ? 'border-[#F3DFA8] text-[#F3DFA8]' : 'border-transparent text-white/50'
             }`}
           >
-            WebUSB in Browser
+            Private Inference
           </button>
           <button
-            onClick={() => setTab('events')}
+            onClick={() => setTab('agents')}
             className={`pb-3 border-b-2 transition-colors cursor-pointer ${
-              tab === 'events' ? 'border-[#F3DFA8] text-[#F3DFA8]' : 'border-transparent text-white/50'
+              tab === 'agents' ? 'border-[#F3DFA8] text-[#F3DFA8]' : 'border-transparent text-white/50'
             }`}
           >
-            Camera Events
+            Agents
           </button>
         </div>
 
@@ -329,63 +331,58 @@ export function DocsModal({ isOpen, onClose }: ModalProps) {
         <div className="p-6 overflow-y-auto font-mono text-xs text-[rgba(239,233,221,0.8)] leading-relaxed space-y-4">
           {tab === 'quickstart' && (
             <div>
-              <p className="text-white/60 mb-2">// 1. Install package</p>
+              <p className="text-white/60 mb-2"># 1. Install</p>
               <pre className="p-3 bg-black/60 rounded border border-white/10 text-[#F3DFA8] mb-4">
-                npm i @darkgrade/link
+                pip install unparalleled-veil
               </pre>
 
-              <p className="text-white/60 mb-2">// 2. Connect and capture take</p>
+              <p className="text-white/60 mb-2"># 2. Wrap an agent so every call runs in a sealed enclave</p>
               <pre className="p-3 bg-black/60 rounded border border-white/10 text-[#EFE9DD] overflow-x-auto">
-{`import { CameraManager } from '@darkgrade/link';
+{`from unparalleled import Veil
 
-const camera = await CameraManager.autoDetect();
-console.log('Connected to:', camera.model); // Sony α7 IV
+# Give your agent a private, self-custodied wallet
+agent = Veil.agent("my-trader", wallet="self")
 
-// Set capture parameters
-await camera.setExposure({
-  iso: 800,
-  shutterSpeed: '1/50',
-  aperture: 'f/2.8',
-  whiteBalance: '5600K'
-});
+# Everything it thinks now stays sealed on-device
+with agent.enclave():
+    reply = agent.run("rebalance my portfolio")
 
-// Start synchronized recording
-await camera.startRecording();`}
+print(reply.verifiable)  # True — proof, not a promise`}
               </pre>
             </div>
           )}
 
-          {tab === 'webusb' && (
+          {tab === 'inference' && (
             <div>
-              <p className="text-white/60 mb-2">// Direct browser access without native plugins</p>
+              <p className="text-white/60 mb-2"># Encrypted inference: prompts and outputs never leave the enclave</p>
               <pre className="p-3 bg-black/60 rounded border border-white/10 text-[#EFE9DD] overflow-x-auto">
-{`import { requestBrowserCamera } from '@darkgrade/link/browser';
+{`from unparalleled import Veil
 
-const button = document.getElementById('connect-btn');
-button.onclick = async () => {
-  const session = await requestBrowserCamera({
-    filters: [{ vendorId: 0x054c }] // Sony
-  });
+veil = Veil(
+    model="open-weights/agent-7b",
+    attest=True,        # prove the hardware, reveal nothing
+    region="ch-1",      # pin your enclave
+)
 
-  session.streamLiveView((frameBlob) => {
-    videoCanvas.draw(frameBlob);
-  });
-};`}
+result = veil.infer(
+    prompt=agent.private_thought,
+    retention="none",   # zero logs, by contract
+)
+print(result.proof)     # zk-snark you can verify on-chain
+`}
               </pre>
             </div>
           )}
 
-          {tab === 'events' && (
+          {tab === 'agents' && (
             <div>
-              <p className="text-white/60 mb-2">// Listen to physical shutter, dial rotations & focus locks</p>
+              <p className="text-white/60 mb-2"># Agents transact and coordinate without leaving a trail</p>
               <pre className="p-3 bg-black/60 rounded border border-white/10 text-[#EFE9DD] overflow-x-auto">
-{`camera.on('shutterPress', (event) => {
-  console.log('Take started at timestamp:', event.timestamp);
-});
+{`pay = veil.shielded_payment(to="agent://research-2", amount=usdc(5))
 
-camera.on('focusLock', ({ distance, coordinates }) => {
-  renderFocusBox(coordinates);
-});`}
+pay.on("settled", lambda r: agent.remember(r.receipt_only))
+
+veil.message("agent://research-2", body="meet at block 21M", e2ee=True)`}
               </pre>
             </div>
           )}
@@ -393,8 +390,8 @@ camera.on('focusLock', ({ distance, coordinates }) => {
 
         {/* Footer */}
         <div className="h-12 px-6 border-t border-[rgba(239,233,221,0.1)] bg-[#070605] flex items-center justify-between text-xs font-mono text-white/50">
-          <span>MIT / FAIR CORE 1.0</span>
-          <span>DOCUMENTATION V2.4</span>
+          <span>APACHE 2.0 / OPEN SOURCE</span>
+          <span>DOCUMENTATION V0.1</span>
         </div>
       </div>
     </div>
@@ -412,40 +409,40 @@ export function ActDetailModal({
 
   const actData = {
     1: {
-      title: 'Act I: Link',
-      status: 'SHIPPING TODAY (v2.4.0)',
-      summary: 'The open-source camera hardware bridge for Node.js, WebUSB, and native platforms.',
+      title: 'Act I: Veil',
+      status: 'SHIPPING TODAY (v0.1.0)',
+      summary: 'The encrypted inference layer that lets your agents think without ever being watched.',
       bullets: [
-        'Universal vendor abstraction: Sony PTP/IP, Canon EDSDK, Nikon MTP.',
-        'High-speed WebUSB streaming right inside modern Chrome & Chromium browsers.',
-        'Hardware metadata synchronization down to the millisecond.',
-        'Zero cloud dependency: run 100% locally on your workstation.',
+        'Runs every prompt, memory read and output inside a sealed enclave.',
+        'Attested hardware you can verify yourself — no logs, no retention.',
+        'Self-custodied agent wallets and keys, from day one.',
+        'The first private breath of an Unparalleled agent.',
       ],
-      icon: <Camera className="text-[#F3DFA8]" size={24} />,
+      icon: <Sparkles className="text-[#F3DFA8]" size={24} />,
     },
     2: {
-      title: 'Act II: Studio',
-      status: 'IN ACTIVE DEVELOPMENT (BETA Q3)',
-      summary: 'Automated scene director, lighting telemetry sync, and instant first cuts.',
+      title: 'Act II: Vault',
+      status: 'IN ACTIVE DEVELOPMENT (ALPHA)',
+      summary: 'Shielded value — the layer that lets agents hold, spend and settle with no observer.',
       bullets: [
-        'Automatic audio timecode synchronization across multiple cameras.',
-        'Takes are organized by scene, shot number, and actor focus.',
-        'Generates DaVinci Resolve (.drp) and Final Cut XML projects immediately after recording.',
-        'Smart exposure compensation and LUT auto-matching.',
+        'Agent-to-agent payments with private amounts.',
+        'On-chain settlement that stays verifiable, never readable.',
+        'Per-agent spending policies and streaming payments.',
+        'You keep the only audit key.',
       ],
-      icon: <Sliders className="text-[#F3DFA8]" size={24} />,
+      icon: <Cpu className="text-[#F3DFA8]" size={24} />,
     },
     3: {
-      title: 'Act III: Create',
+      title: 'Act III: Sovereign',
       status: 'THE RESEARCH DREAM',
-      summary: 'Natural language creative collaboration with your camera and raw media library.',
+      summary: 'A surveillance-free machine economy, owned by no one and open to every agent.',
       bullets: [
-        'Ask for pacing changes: "Cut this segment down to 45 seconds for a dynamic YouTube Short."',
-        'Local neural voice matching and whisper transcript alignment.',
-        'Contextual B-roll extraction from your private footage archive.',
-        'Preserves creative ownership: no generative AI avatars or synthetic voice slop.',
+        'Millions of agents with identities that can’t be tracked or sold.',
+        'Private coordination, marketplaces and reputation — all off the record.',
+        'Zero-knowledge proofs instead of gatekeepers.',
+        'Privacy as the default substrate for machinekind.',
       ],
-      icon: <Zap className="text-[#F3DFA8]" size={24} />,
+      icon: <Users className="text-[#F3DFA8]" size={24} />,
     },
   }[actNumber];
 

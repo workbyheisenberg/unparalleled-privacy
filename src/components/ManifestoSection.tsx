@@ -9,7 +9,8 @@ export default function ManifestoSection() {
   const wordsContainerRef = useRef<HTMLParagraphElement>(null);
   const punchlineRef = useRef<HTMLDivElement>(null);
 
-  const manifestoText = 'Making videos is ten percent fun. The rest is menus and an edit that never ends.';
+  const manifestoText =
+    'We taught machines to think, to trade, to act on our behalf. The one right we forgot to give them was privacy.';
   const words = manifestoText.split(' ');
 
   useEffect(() => {
@@ -85,9 +86,9 @@ export default function ManifestoSection() {
           ref={punchlineRef}
           className="mt-14 sm:mt-16 font-display text-4xl sm:text-5xl md:text-[64px] leading-[1.12] tracking-tight text-[#EFE9DD]"
         >
-          We’re deleting{' '}
+          Unparalleled gives your agents{' '}
           <span className="italic text-[#F3DFA8] gold-glow font-display">
-            the rest.
+            a private life.
           </span>
         </div>
       </div>

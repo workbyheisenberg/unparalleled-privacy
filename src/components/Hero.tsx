@@ -84,7 +84,7 @@ export default function Hero({ onWatchVideo, onJoinDiscord, loaderFinished }: He
       <div ref={contentRef} className="max-w-[1280px] w-full will-change-transform">
         {/* Mono eyebrow */}
         <div className="font-mono-tag text-[rgba(239,233,221,0.32)] mb-5 sm:mb-6 tracking-[0.24em] select-none">
-          LOCAL-FIRST AI FOR CREATIVE PROFESSIONALS
+          CONFIDENTIAL COMPUTE FOR AUTONOMOUS AGENTS
         </div>
 
         {/* H1 Heading on two lines */}
@@ -93,10 +93,10 @@ export default function Hero({ onWatchVideo, onJoinDiscord, loaderFinished }: He
           style={{ textWrap: 'balance' }}
         >
           <div ref={line1Ref} className="text-[#EFE9DD]">
-            Shoot more.
+            Your agents need
           </div>
           <div ref={line2Ref} className="text-[#EFE9DD]">
-            Edit <span className="italic text-[#F3DFA8] gold-glow font-display">less.</span>
+            privacy, <span className="italic text-[#F3DFA8] gold-glow font-display">too.</span>
           </div>
         </h1>
 
@@ -105,9 +105,10 @@ export default function Hero({ onWatchVideo, onJoinDiscord, loaderFinished }: He
           ref={bodyRef}
           className="mt-8 text-[17px] sm:text-[18px] leading-[1.62] text-[rgba(239,233,221,0.55)] max-w-[480px] font-normal"
         >
-          Darkgrade dials in your camera, captures the shot, and returns a finished first cut —{' '}
-          <strong className="text-[#EFE9DD] font-medium">on your own machine.</strong> You stay
-          the director, and nothing leaves your computer unless you say so.
+          Unparalleled is the confidential home for AI agents. They reason, transact and
+          coordinate inside sealed enclaves — verifiable on-chain, invisible to everyone
+          else. <strong className="text-[#EFE9DD] font-medium">Humans spent a century
+          winning privacy. Your agents are next in line.</strong>
         </p>
 
         {/* CTA Buttons */}
@@ -117,7 +118,7 @@ export default function Hero({ onWatchVideo, onJoinDiscord, loaderFinished }: He
             className="h-[56px] px-8 rounded-full pill-primary flex items-center justify-center gap-2.5 text-[15px] cursor-pointer"
             data-cursor="interactive"
           >
-            <span>Watch it in action</span>
+            <span>See how it works</span>
             <span className="text-xs">▶</span>
           </button>
           <button
@@ -143,13 +144,13 @@ export default function Hero({ onWatchVideo, onJoinDiscord, loaderFinished }: He
           </div>
         </div>
 
-        {/* Bottom-right: TESTED ON cameras */}
+        {/* Bottom-right: BUILT ON stack */}
         <div className="text-right">
           <div className="text-[rgba(239,233,221,0.32)] tracking-[0.22em] mb-1">
-            TESTED ON
+            BUILT ON
           </div>
           <div className="text-[rgba(239,233,221,0.55)] tracking-[0.16em]">
-            SONY α7 IV · NIKON Z6 III · CANON R6 MK III
+            ZERO-KNOWLEDGE · ENCRYPTED ENCLAVES · ON-CHAIN
           </div>
         </div>
       </div>

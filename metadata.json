@@ -1,6 +1,6 @@
 {
-  "name": "DARKGRADE",
-  "description": "Dark, cinematic, single-page product landing site for DARKGRADE. Local-first AI for creative professionals.",
+  "name": "Unparalleled",
+  "description": "Cinematic single-page landing site for Unparalleled — the privacy layer for autonomous AI agents. Encrypted inference, shielded on-chain transactions, and verifiable identity for the coming machine economy. Because it's not only humans who need privacy — your AI agents do too.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

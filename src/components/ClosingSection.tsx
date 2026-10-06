@@ -14,8 +14,8 @@ export default function ClosingSection({ onWatchVideo, onOpenStarModal }: Closin
   const wordsRef = useRef<HTMLParagraphElement>(null);
   const punchlineRef = useRef<HTMLDivElement>(null);
 
-  const creamPart = 'Somewhere, two people have a podcast in their heads';
-  const dimPart = 'the world will never hear.';
+  const creamPart = 'Privacy was never only a human right.';
+  const dimPart = 'It belongs to every mind that thinks.';
 
   const creamWords = creamPart.split(' ');
   const dimWords = dimPart.split(' ');
@@ -104,7 +104,7 @@ export default function ClosingSection({ onWatchVideo, onOpenStarModal }: Closin
           className="mt-14 font-display italic text-4xl sm:text-5xl md:text-[60px] leading-[1.12] tracking-tight text-[#F3DFA8] gold-glow"
           style={{ textWrap: 'balance' }}
         >
-          The world is still waiting on what you haven’t made yet.
+          Your agents deserve a private life.
         </div>
 
         {/* Centered CTA pills */}
@@ -114,7 +114,7 @@ export default function ClosingSection({ onWatchVideo, onOpenStarModal }: Closin
             className="h-[56px] px-8 rounded-full pill-primary flex items-center justify-center gap-2.5 text-[15px] cursor-pointer"
             data-cursor="interactive"
           >
-            <span>Watch it in action</span>
+            <span>See how it works</span>
             <span className="text-xs">▶</span>
           </button>
 

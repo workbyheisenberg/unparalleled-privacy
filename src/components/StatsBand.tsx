@@ -6,10 +6,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function StatsBand() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [val1, setVal1] = useState('7–13');
-  const [val2, setVal2] = useState(16);
-  const [val3, setVal3] = useState(0);
-  const [val4, setVal4] = useState(63);
+  const [val1] = useState(0);
+  const [val2, setVal2] = useState(0);
+  const [val3] = useState(3);
+  const [val4, setVal4] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
@@ -25,23 +25,16 @@ export default function StatsBand() {
 
         // Animate counter values with expo-out curve over 1.8s
         const obj = {
-          rangeStart: 7,
-          rangeEnd: 13,
-          stat2: 16,
-          stat4: 63,
+          stat2: 0,
+          stat4: 0,
         };
 
         gsap.to(obj, {
-          rangeStart: 10,
-          rangeEnd: 20,
-          stat2: 25,
-          stat4: 100,
+          stat2: 100,
+          stat4: 256,
           duration: 1.8,
           ease: 'power4.out',
           onUpdate: () => {
-            const start = Math.round(obj.rangeStart);
-            const end = Math.round(obj.rangeEnd);
-            setVal1(`${start}–${end}`);
             setVal2(Math.round(obj.stat2));
             setVal4(Math.round(obj.stat4));
           },
@@ -60,37 +53,37 @@ export default function StatsBand() {
       className="w-full border-y border-[rgba(239,233,221,0.12)] min-h-[190px] page-gutters py-10 md:py-0 flex items-center select-none"
     >
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[rgba(239,233,221,0.12)]">
-        {/* Stat 1: 10–20 hrs */}
+        {/* Stat 1: 0 bytes */}
         <div className="py-6 sm:py-8 sm:px-6 lg:px-8 flex flex-col justify-center">
           <div className="flex items-baseline mb-2">
             <span className="font-display text-6xl sm:text-7xl lg:text-[76px] leading-none text-[#EFE9DD] tabular-nums font-normal tracking-tight">
               {val1}
             </span>
             <span className="ml-2.5 font-display italic text-3xl sm:text-4xl text-[#F3DFA8] gold-glow">
-              hrs
+              bytes
             </span>
           </div>
           <p className="text-[14px] leading-snug text-[rgba(239,233,221,0.55)] max-w-[220px]">
-            of post-production per video, cut down to minutes.
+            of your agent's prompts, memory or keys ever leave the enclave.
           </p>
         </div>
 
-        {/* Stat 2: 25 yrs */}
+        {/* Stat 2: 100 % */}
         <div className="py-6 sm:py-8 sm:px-6 lg:px-8 flex flex-col justify-center">
           <div className="flex items-baseline mb-2">
             <span className="font-display text-6xl sm:text-7xl lg:text-[76px] leading-none text-[#EFE9DD] tabular-nums font-normal tracking-tight">
               {val2}
             </span>
             <span className="ml-2.5 font-display italic text-3xl sm:text-4xl text-[#F3DFA8] gold-glow">
-              yrs
+              %
             </span>
           </div>
           <p className="text-[14px] leading-snug text-[rgba(239,233,221,0.55)] max-w-[220px]">
-            cameras have spoken one shared language.
+            of settlements verifiable on-chain. Trust the math, not the middleman.
           </p>
         </div>
 
-        {/* Stat 3: 0 bytes */}
+        {/* Stat 3: 3 layers */}
         <div className="py-6 sm:py-8 sm:px-6 lg:px-8 flex flex-col justify-center">
           <div className="flex items-baseline mb-2">
             <span className="font-display text-6xl sm:text-7xl lg:text-[76px] leading-none text-[#EFE9DD] tabular-nums font-normal tracking-tight">
@@ -101,26 +94,26 @@ export default function StatsBand() {
                 hasAnimated ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              bytes
+              layers
             </span>
           </div>
           <p className="text-[14px] leading-snug text-[rgba(239,233,221,0.55)] max-w-[220px]">
-            leave your machine by default.
+            of defense: sealed enclaves, zero-knowledge proofs, self-custody.
           </p>
         </div>
 
-        {/* Stat 4: 100 % */}
+        {/* Stat 4: 256 bit */}
         <div className="py-6 sm:py-8 sm:px-6 lg:px-8 flex flex-col justify-center">
           <div className="flex items-baseline mb-2">
             <span className="font-display text-6xl sm:text-7xl lg:text-[76px] leading-none text-[#EFE9DD] tabular-nums font-normal tracking-tight">
               {val4}
             </span>
             <span className="ml-2 font-display italic text-3xl sm:text-4xl text-[#F3DFA8] gold-glow">
-              %
+              bit
             </span>
           </div>
           <p className="text-[14px] leading-snug text-[rgba(239,233,221,0.55)] max-w-[220px]">
-            of our code is licensed as fair core. View it on GitHub.
+            encryption guarding every agent's memory, keys and identity.
           </p>
         </div>
       </div>

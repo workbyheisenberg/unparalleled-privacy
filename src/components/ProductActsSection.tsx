@@ -17,7 +17,7 @@ export default function ProductActsSection({ onSelectAct }: ProductActsSectionPr
 
   const copyCode = (e: React.MouseEvent) => {
     e.stopPropagation();
-    navigator.clipboard.writeText('npm i @darkgrade/link');
+    navigator.clipboard.writeText('npm i @unparalleled/veil');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -49,32 +49,32 @@ export default function ProductActsSection({ onSelectAct }: ProductActsSectionPr
   const acts = [
     {
       act: 'Act I',
-      title: 'Link',
+      title: 'Veil',
       pillText: '● SHIPPING NOW',
       pillClass: 'border-[#F3DFA8] text-[#F3DFA8] bg-[#F3DFA8]/5',
       dotColor: 'bg-[#F3DFA8]',
       description:
-        'The open-source engine that lets any app speak fluent camera — settings, capture, live view, events. Free, today.',
+        'Encrypted inference for your agents. Their prompts, memory and outputs stay sealed inside an attested enclave — nobody, not even us, can read them.',
       hasCodeChip: true,
     },
     {
       act: 'Act II',
-      title: 'Studio',
+      title: 'Vault',
       pillText: '○ IN DEVELOPMENT',
       pillClass: 'border-[rgba(239,233,221,0.2)] text-[rgba(239,233,221,0.6)] bg-transparent',
       dotColor: 'border border-[rgba(239,233,221,0.4)]',
       description:
-        'The app that sets the scene, rolls the take, and hands you an automatic first edit the moment you stop recording.',
+        'Private value. Agents hold, spend and settle on-chain through shielded transactions and self-custodied wallets — no observer, no trail.',
       hasCodeChip: false,
     },
     {
       act: 'Act III',
-      title: 'Create',
+      title: 'Sovereign',
       pillText: '○ THE DREAM',
       pillClass: 'border-[rgba(239,233,221,0.2)] text-[rgba(239,233,221,0.6)] bg-transparent',
       dotColor: 'border border-[rgba(239,233,221,0.4)]',
       description:
-        'Say what you want to make; get a finished video back. Your footage, your face, your voice — you stay the director.',
+        'A surveillance-free machine economy. Millions of agents transacting, coordinating and earning with identities no one can track, sell or freeze.',
       hasCodeChip: false,
     },
   ];
@@ -154,7 +154,7 @@ export default function ProductActsSection({ onSelectAct }: ProductActsSectionPr
                       className="inline-flex items-center gap-4 px-4 py-2 rounded-lg border border-[rgba(239,233,221,0.12)] bg-[#070605]/70 backdrop-blur-sm text-[12px] font-mono select-text"
                     >
                       <span className="text-[rgba(239,233,221,0.32)]">$</span>
-                      <span className="text-[#EFE9DD]">npm i @darkgrade/link</span>
+                      <span className="text-[#EFE9DD]">npm i @unparalleled/veil</span>
                       <button
                         onClick={copyCode}
                         className="ml-2 px-2.5 py-1 rounded bg-[rgba(239,233,221,0.06)] hover:bg-[#F3DFA8]/20 text-[10px] uppercase tracking-wider text-[rgba(239,233,221,0.7)] hover:text-[#F3DFA8] transition-colors flex items-center gap-1.5 cursor-pointer"

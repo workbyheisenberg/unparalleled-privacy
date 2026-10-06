@@ -25,10 +25,10 @@ export default function Footer({
         {/* Column 1: Brand Wordmark & Tagline */}
         <div className="flex flex-col gap-4">
           <div className="font-pixel text-[17px] text-[#EFE9DD] tracking-[0.16em] uppercase">
-            (+) DARKGRADE
+            (+) UNPARALLELED
           </div>
           <p className="text-[15px] sm:text-[16px] text-[rgba(239,233,221,0.55)] max-w-[280px] leading-relaxed">
-            Local-first AI for creative professionals.
+            Privacy for the agents that think for you.
           </p>
         </div>
 
@@ -44,14 +44,21 @@ export default function Footer({
                 className="text-[rgba(239,233,221,0.55)] hover:text-[#EFE9DD] text-left transition-colors cursor-pointer"
                 data-cursor="interactive"
               >
-                Link
+                Veil
               </button>
               <button
                 onClick={() => onSelectAct(2)}
                 className="text-[rgba(239,233,221,0.55)] hover:text-[#EFE9DD] text-left transition-colors cursor-pointer"
                 data-cursor="interactive"
               >
-                Studio
+                Vault
+              </button>
+              <button
+                onClick={() => onSelectAct(3)}
+                className="text-[rgba(239,233,221,0.55)] hover:text-[#EFE9DD] text-left transition-colors cursor-pointer"
+                data-cursor="interactive"
+              >
+                Sovereign
               </button>
               <button
                 onClick={() => scrollTo('roadmap')}
@@ -93,15 +100,13 @@ export default function Footer({
                 Discord
               </button>
               <a
-                href="#watch-action"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollTo('product');
-                }}
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[rgba(239,233,221,0.55)] hover:text-[#EFE9DD] text-left transition-colors cursor-pointer"
                 data-cursor="interactive"
               >
-                YouTube
+                X / Twitter
               </a>
             </div>
           </div>
@@ -118,7 +123,7 @@ export default function Footer({
                 Careers
               </span>
               <a
-                href="mailto:contact@darkgrade.dev"
+                href="mailto:hello@unparalleled.xyz"
                 className="text-[rgba(239,233,221,0.55)] hover:text-[#EFE9DD] cursor-pointer transition-colors"
                 data-cursor="interactive"
               >
@@ -134,8 +139,8 @@ export default function Footer({
 
       {/* Copyright row */}
       <div className="mt-20 pt-8 border-t border-[rgba(239,233,221,0.08)] flex flex-col sm:flex-row items-center justify-between text-[12px] font-mono text-[rgba(239,233,221,0.35)] gap-4">
-        <div>© {new Date().getFullYear()} DARKGRADE INC. ALL RIGHTS RESERVED.</div>
-        <div>FAIR CORE LICENSED · LOCAL-FIRST</div>
+        <div>© {new Date().getFullYear()} UNPARALLELED. ALL RIGHTS RESERVED.</div>
+        <div>OPEN SOURCE · PRIVATE BY DEFAULT</div>
       </div>
     </footer>
   );

@@ -1,15 +1,15 @@
 export default function MarqueeStrip() {
   const items = [
-    { text: 'Studios', italic: true, cream: true },
-    { text: 'Livestreams', italic: false, cream: false },
-    { text: 'Creators', italic: true, cream: true },
-    { text: 'YouTube', italic: false, cream: false },
-    { text: 'YouTubers', italic: true, cream: true },
-    { text: 'Reels', italic: false, cream: false },
-    { text: 'Podcasters', italic: true, cream: true },
-    { text: 'Shorts', italic: false, cream: false },
-    { text: 'Agencies', italic: true, cream: true },
-    { text: 'TikTok', italic: false, cream: false },
+    { text: 'Privacy', italic: true, cream: true },
+    { text: 'Autonomous agents', italic: false, cream: false },
+    { text: 'Zero-knowledge', italic: true, cream: true },
+    { text: 'Encrypted compute', italic: false, cream: false },
+    { text: 'Self-custody', italic: true, cream: true },
+    { text: 'Agent identity', italic: false, cream: false },
+    { text: 'Shielded value', italic: true, cream: true },
+    { text: 'On-chain', italic: false, cream: false },
+    { text: 'Machinekind', italic: true, cream: true },
+    { text: 'For your agents', italic: false, cream: false },
   ];
 
   return (

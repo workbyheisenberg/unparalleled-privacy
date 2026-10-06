@@ -45,7 +45,7 @@ export default function Header({ onOpenStarModal, onOpenDocsModal }: HeaderProps
             data-cursor="interactive"
           >
             <span className="font-pixel text-[15px] sm:text-[17px] tracking-[0.18em] uppercase select-none">
-              (+) DARKGRADE
+              (+) UNPARALLELED
             </span>
           </a>
 
@@ -56,7 +56,7 @@ export default function Header({ onOpenStarModal, onOpenDocsModal }: HeaderProps
               className="text-[rgba(239,233,221,0.55)] hover:text-[#EFE9DD] transition-colors cursor-pointer"
               data-cursor="interactive"
             >
-              Product
+              Thesis
             </button>
             <button
               onClick={() => scrollToSection('roadmap')}
@@ -116,7 +116,7 @@ export default function Header({ onOpenStarModal, onOpenDocsModal }: HeaderProps
               onClick={() => scrollToSection('product')}
               className="font-display text-4xl text-[#EFE9DD] hover:text-[#F3DFA8] text-left transition-colors cursor-pointer"
             >
-              Product
+              Thesis
             </button>
             <button
               onClick={() => scrollToSection('roadmap')}

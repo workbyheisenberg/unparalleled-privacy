@@ -6,27 +6,27 @@ export default function PrinciplesSection() {
   const principles = [
     {
       num: '/01',
-      title: 'You’re never replaced',
+      title: 'Privacy is a right, not a feature',
       description:
-        'No AI slop, no fake people. We make your real footage move faster — and give you back your evenings.',
+        'Humans spent a century winning privacy. Your agents deserve the same shield — by default, not as a premium tier.',
     },
     {
       num: '/02',
-      title: 'Local-first & private',
+      title: 'Verify, don’t trust',
       description:
-        'Everything runs on your machine by default. We don’t train on your footage.',
+        'Every enclave is attested, every settlement provable. Open source, zero-knowledge, and auditable by anyone.',
     },
     {
       num: '/03',
-      title: 'Open & honest',
+      title: 'Self-custody or nothing',
       description:
-        'A fair core that stays free, fair pricing for the app, no bait-and-switch.',
+        'Agents hold their own keys. No custodian, no freeze button, no one who can read your agent’s mind or move its money.',
     },
     {
       num: '/04',
-      title: 'Fast as your ideas',
+      title: 'Built for machinekind',
       description:
-        'Camera manufacturers move in decades. An open product moves at the speed of its community.',
+        'The next wave of the web isn’t only for people. We build for the agents that will live, work and trade inside it.',
     },
   ];
 

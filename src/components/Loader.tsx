@@ -86,7 +86,7 @@ export default function Loader({ onComplete, videoLoaded = false }: LoaderProps)
       <div className="flex flex-col items-center">
         {/* Tiny pixel label */}
         <div className="font-pixel text-[11px] text-[rgba(239,233,221,0.32)] tracking-[0.22em] uppercase mb-5">
-          (+) DARKGRADE
+          (+) UNPARALLELED
         </div>
 
         {/* Large serif counter */}
