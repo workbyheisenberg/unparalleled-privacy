@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { Copy, Check } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -17,6 +18,15 @@ export default function Hero({ onWatchVideo, onJoinDiscord, loaderFinished }: He
   const line2Ref = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+
+  const [copied, setCopied] = useState(false);
+  const CA = '0x3865bf4903700f2481d00e1d66a09e120bf6bb89';
+
+  const copyCA = () => {
+    navigator.clipboard.writeText(CA);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     if (!loaderFinished) return;
@@ -105,17 +115,41 @@ export default function Hero({ onWatchVideo, onJoinDiscord, loaderFinished }: He
           ref={bodyRef}
           className="mt-8 text-[17px] sm:text-[18px] leading-[1.62] text-[rgba(239,233,221,0.55)] max-w-[480px] font-normal"
         >
-          Unparalleled is the confidential home for AI agents. They reason, transact and
-          coordinate inside sealed enclaves — verifiable on-chain, invisible to everyone
-          else. <strong className="text-[#EFE9DD] font-medium">Humans spent a century
-          winning privacy. Your agents are next in line.</strong>
+          The confidential home for AI agents —{' '}
+          <strong className="text-[#EFE9DD] font-medium">
+            sealed enclaves, verifiable on-chain, invisible to everyone else.
+          </strong>
         </p>
 
-        {/* Zcash note */}
-        <p className="mt-4 text-[13px] tracking-[0.02em] text-[rgba(239,233,221,0.4)] max-w-[480px]">
-          Built on the zk-SNARK cryptography made famous by Zcash — with native support for
-          the Zcash layer stack on the way.
-        </p>
+        {/* Contract address */}
+        <div className="mt-9 sm:mt-10 w-full max-w-[520px]">
+          <div className="font-mono-tag text-[rgba(239,233,221,0.32)] tracking-[0.24em] mb-3 select-none">
+            ROBINHOOD CONTRACT ADDRESS
+          </div>
+          <div className="flex items-center justify-between gap-4 rounded-xl border border-[rgba(239,233,221,0.12)] bg-[#070605]/60 backdrop-blur-sm px-4 sm:px-5 py-3.5">
+            <span className="font-mono text-[12px] sm:text-[14px] text-[#EFE9DD] truncate tracking-wide select-text">
+              {CA}
+            </span>
+            <button
+              onClick={copyCA}
+              className="shrink-0 px-3 py-1.5 rounded-md bg-[rgba(239,233,221,0.06)] hover:bg-[#F3DFA8]/20 text-[10px] uppercase tracking-wider text-[rgba(239,233,221,0.7)] hover:text-[#F3DFA8] transition-colors flex items-center gap-1.5 cursor-pointer"
+              data-cursor="interactive"
+              title="Copy contract address"
+            >
+              {copied ? (
+                <>
+                  <Check size={12} className="text-[#F3DFA8]" />
+                  <span className="text-[#F3DFA8]">COPIED</span>
+                </>
+              ) : (
+                <>
+                  <Copy size={12} />
+                  <span>COPY</span>
+                </>
+              )}
+            </button>
+          </div>
+        </div>
 
         {/* CTA Buttons */}
         <div ref={ctaRef} className="mt-9 sm:mt-11 flex flex-wrap items-center gap-4">
